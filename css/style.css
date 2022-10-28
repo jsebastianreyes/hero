@@ -1,0 +1,171 @@
+:root{
+    --blue: #1B90FC;
+    --black: #202020;
+    --white: #ffffff;
+    --grey: #929292;
+    --mainFont: 'Roboto', sans-serif;
+    --secundaryFont: 'Roboto Condensed', sans-serif;
+    --headline1: bold 2.6rem/2.9rem var(--secundaryFont);
+    --subtitle1: bold 1.62rem/1.5rem var(--secundaryFont);
+    --bodyBold: bold  1rem/1.5rem var(--mainFont);
+    --bodyRegular: 400 1.05rem/1.5rem var(--mainFont);
+    --button: bold .75rem/1rem var(mainFont)
+
+}
+
+body{
+    font: var(--bodyRegular);
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.hero{
+   
+    background-repeat: no-repeat;
+    block-size: 758px;
+    background-color: var(--black);
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    background-size: contain;
+}
+.wrapper{
+    max-inline-size: 74rem;
+    margin: auto;
+    padding-inline: 2rem;
+
+}
+
+
+
+.heroContain{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    block-size: 768px;
+    grid-template-areas: "image" "content";
+    gap: 2rem;
+}
+
+.heroContain-content{
+    display: flex;
+    color: var(--white);
+    block-size: 100%;
+    grid-area: content;
+}
+
+
+.heroContain-img{
+    grid-area: image;
+    background-image: url(../images/img.png);
+    background-size: cover;
+    margin-inline-end: -2rem;
+    margin-inline-start: -2rem;
+    background-position: center;
+}
+
+
+.card img{
+    margin-block-end: 1.5rem;
+    inline-size: 7rem;
+}
+
+.card .btn{
+    margin-block-start: 1.5rem;
+}
+
+.card h1{
+    padding-block-end: .5rem;
+    font: var(--headline1);
+    font-size: 1.8rem;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+    /* gap: 1.5rem; */
+    position: relative;
+    z-index: 2;
+}
+
+
+.btn{
+    background: var(--blue);
+    font: var(--button);
+    text-transform: uppercase;
+    color: var(--white);
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 2.2rem;
+    border-radius: 4rem;
+}
+
+
+
+
+@media  screen and (min-width:568px){
+    .card h1{
+        font-size: auto;
+    }
+    .card img{
+        inline-size: 9.7rem;
+    }
+    
+    .heroContain{
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media  screen and (min-width:1024px){
+
+.btn{
+    inline-size: fit-content;
+}
+
+.heroContain-img{
+    margin: 0;
+    background-image: none;
+}
+.heroContain{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 758px;
+    grid-template-areas: "content image";
+    gap: 0;
+    
+}
+.hero{
+        background-size: inherit;
+        background-position: center;
+        background-image: url(../images/img.png);
+ }
+
+    .figureContent{
+        position: absolute;
+        inline-size: 50%;
+        inset-inline-start: 0;
+        inset-block-start: 0;
+        block-size: inherit;
+        background: var(--black);
+        z-index: 1;
+        clip-path: polygon(0 0, 80% 0, 100% 100%, 0 100%);
+        
+    }
+
+    .card{
+        max-inline-size: 26.5rem;
+    }
+
+    .heroContain-content{
+        align-items: center;
+    }
+
+   
+
+    
+}
